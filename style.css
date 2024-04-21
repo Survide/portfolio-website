@@ -1,171 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 
-:root {
-    --text-color: #ecf0f1;
-    --background-color: #24252A;
-    --font-family: "Ruda", sans-serif;
-}
+:root::-webkit-scrollbar {
+    display: none;
+  }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+body {
+    background-color: black;
     padding: 0;
-    background-color: var(--background-color);
-    scrollbar-width: none;
-}
-li, a, button {
+    margin: 0;
+    color: white;
     font-family: "Ruda", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--text-color);
-    text-decoration: none;
+    font-size: 100px;
+    height: 370vh;
+    /* border: 5px solid white; */
+}   
+
+#navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    backdrop-filter: blur(10px);
+    /* border: 5px solid white; */
 }
-header {
+
+#nav-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    position: sticky;
-    top: 0px;
-    transition: 0.4s ease-in-out;
-}
-
-header.scrolled {
-    opacity: 1;
-    box-shadow: 0 0 100px;
-}
-
-.logo {
-    cursor: pointer;
-    max-width: 50px;
-}
-
-.nav_links {
-    list-style: none;
-}
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover {
-    color: #0088a9;
-}
-.cta button{
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-.cta button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
-}
-
-.about-me-box {
-    transform-style: preserve-3d;
-    display: flex;
+    flex-direction: row;
+    height: 2em;
     justify-content: space-around;
-    margin-top: 100px;
+    /* border: 5px solid white; */
+    font-size: 50px;
+}
+
+button {
+    font-family: "Ruda", sans-serif;
+    font-size: 50px;
+    color: white;
     background-color: transparent;
-    position: relative;
-    text-wrap: nowrap;
-    font-size: 200px;
-    font-family: var(--font-family);
-    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    border-radius: 0.25em;
+
 }
 
-.about-me-box .about-me-text{
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    font-size: 200px;
-    font-family: var(--font-family);
-    color: var(--text-color);
-    border: 5px solid white;
-    /* margin-top: 200px; */
+button:hover {
+    letter-spacing: 0.25em;
+    transform: scale(0.9) rotate(0deg);
+    background: radial-gradient();
 }
 
-.scroll-for-more {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    position: fixed;
-    transform-style: preserve-3d;
-    top: 300px;
-    right: 620px;
-    border: 5px solid white; 
-}
-
-#sfmspan {
-    background-color: trans;
-    border: 5px solid black; 
-    animation: moveTowardsScreen;
-    animation-timeline: scroll()
-}
-
-@keyframes moveTowardsScreen {
-    0% {
-        transform: translateZ(0);
-        top: 0px;
-    }
-    50% {
-        transform: perspective(100px) translateZ(50px);
-    }
-    75% {
-        transform: perspective(100px) translateZ(100px);
-    }
-}
-
-section.hidden {
-    transform: translateY(1500px);
+section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 200vh;
-    border: 5px solid white;
+    min-height: 80vh;
+    /* border: 5px red solid; */
 }
 
-section.hidden.show {
-    z-index: 100;
-    display: grid;
-    align-content: center;
-    border: 5px solid white;
-    /* transform: translateY(-100px); */
+#about-me h1, #about-me h3 {
+    position: relative;
+    color: white;
+    top: 50%;
+    transform: translateY(-150%);
+    font-size: 200px;
+    text-align: center;
+    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+    background-clip:border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-#about-me-title.show {
-    transform: translateY(-500px);
-    opacity: 1;
-    display: block;
-    align-self: center;
-    color: var(--text-color);
-    text-wrap: block;
-    transition: all 2s;
-    font-family: var(--font-family);
+#about-me h3 {
     font-size: 50px;
+    animation: bob 5s linear infinite;
+} 
+
+
+
+@keyframes bob {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-#about-me-description.show {
-    opacity: 1;
-    display: block;
-    align-self: center;
-    color: var(--text-color);
-    border: 5px solid white;
-    text-wrap: block;
-    transition: all 2s;
-    font-family: var(--font-family);
+#whoami {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    margin: 5px;
+}
+
+#whoami h2, #whoami p, #pfp{
+    position: relative;
+    color: white;
+    font-size: 100px;
+    /* border: 5px solid red; */
+}
+
+#whoami h2 {
+    font-size: 40px;
+    color: grey;
+}
+
+#whoami p {
     font-size: 50px;
+} 
+
+#pfp {
+    /* width: 200px; */
+    height: 200px;
+    border-radius: 20px;
 }
 
-@media(prefers-reduced-motion) {
-    #about-me-title.show {
-        transition: none;
-    }
-    #about-me-description.show {
-        transition: none;
-    }
+#whoami h2, #pfp {
+    transform: translateY(-100px);
+}
+
+#cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 450px; 
+    /* border: 5px solid blue;  */
+}
+
+#card_1, #card_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vh;
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+#card_1:hover, #card_2:hover {
+    box-shadow: 0px 0px 100px 3px #2a29a3;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(30%);
+    transition: all 0.5s;
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }

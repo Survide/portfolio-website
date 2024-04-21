@@ -8,26 +8,16 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const about_me_description = document.querySelectorAll('#about-me-description');
-about_me_description.forEach((el) => observer.observe(el));
-
-const about_me_title = document.querySelectorAll('#about-me-title');
-about_me_title.forEach((el) => observer.observe(el));
-
-const hidden = document.querySelectorAll('.hidden');
-hidden.forEach((el) => observer.observe(el));
-
-
-box = document.getElementById("sfmspan")
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 document.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY;
-    const windowHeight = window.innerHeight;
+    // y = window.innerHeight / 2;
+    // x = window.innerWidth / 2;
 
-    if (boxPosition < windowHeight * 0.75) {
-        box.classList.add('show');
-    } else {
-        box.classList.remove('show');
-    }
+    // console.log(x,y)
+
+    cY = window.scrollY;
+    cX = window.scrollX;
+    console.log(cX, cY)
 });
-

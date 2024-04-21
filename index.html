@@ -8,38 +8,51 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="img/logo.png" alt="logo">
-        <nav>
-            <ul class="nav_links" >
-                <li><a href="#">My Projects</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About Me</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
-    </header>
-    <div class="about-me-box">
-        <div class="about-me-text">
-            About Me
+
+    <nav id="navbar">
+        <div id="nav-container">
+            <button>Home</button>
+            <button>Portfolio</button>
         </div>
-        <div class="scroll-for-more">
-            <span id="sfmspan">Scroll for more</span>
-        </div>
-    </div>
-    <section class="hidden">
-        <h1 id="about-me-title">Who am I?</h1>
-        <span id="about-me-description">
-            I am blablabla, from blablabla, doing blablabla
-        </span>
+    </nav>
+
+    <section id="about-me">
+        <h1>About Me</h1>
+        <h3>SCROLL FOR MORE</h3>
     </section>
-    <!-- <footer>
-        <div class="footer-containter">
-            <span class="socials">socials</span>
-            <div class="socials_links">
-                <a class="discord" href="#"><button class="discord_button">Discord</button></a>
+
+    <section class="hidden" id="whoami">
+        <img src="catpfp.jpg" alt="pfp" id="pfp">
+        <h2>Johnny</h2>
+        <p>
+            Bing chilling
+        </p>
+    </section>
+
+    <section class="hidden" id="whatido">
+        <h2>My Projects</h2>
+        <div class="hidden" id="cards">
+
+            <div class="hidden" id="card_1">
+                <h3 id="card_1_name">
+                    Project 1
+                </h3>
+                <h5 id="card_1_desc">
+                    Description
+                </h5>
             </div>
+
+            <div class="hidden" id="card_2">
+                <h3 id="card_2_name">
+                    Project 2
+                </h3>
+                <h5 id="card_2_desc">
+                    Description 2
+                </h5>
+            </div>
+
         </div>
-    </footer> -->
+    </section>
+
 </body>
 </html>

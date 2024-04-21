@@ -11,13 +11,13 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-document.addEventListener('scroll', () => {
-    // y = window.innerHeight / 2;
-    // x = window.innerWidth / 2;
+// document.addEventListener('scroll', () => {
+//     // y = window.innerHeight / 2;
+//     // x = window.innerWidth / 2;
 
-    // console.log(x,y)
+//     // console.log(x,y)
 
-    cY = window.scrollY;
-    cX = window.scrollX;
-    console.log(cX, cY)
-});
+//     cY = window.scrollY;
+//     cX = window.scrollX;
+//     console.log(cX, cY)
+// });

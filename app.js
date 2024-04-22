@@ -11,13 +11,70 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-document.addEventListener('scroll', () => {
-    // y = window.innerHeight / 2;
-    // x = window.innerWidth / 2;
+// document.addEventListener('scroll', () => {
+//     cards = document.querySelector("#cards");
 
-    // console.log(x,y)
+//     card_1 = document.querySelector('#card_1');
+//     card_2 = document.querySelector('#card_2');
 
-    cY = window.scrollY;
-    cX = window.scrollX;
-    console.log(cX, cY)
-});
+//     rect1 = card_1.getBoundingClientRect();
+//     rect2 = card_2.getBoundingClientRect();
+
+//     console.log(window.innerHeight);
+
+//     console.log("rect1:" + rect1.y);
+//     console.log("rect2:" + rect2.y);
+
+// });
+
+const navbar = document.getElementById('navbar');
+let prevScrollPos = window.scrollY;
+let isAnimating = false;
+
+function animateNavbar() {
+    if (!isAnimating) {
+        isAnimating = true;
+        const currentScrollPos = window.scrollY;
+        if (prevScrollPos > currentScrollPos) {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+        } else {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        }
+        prevScrollPos = currentScrollPos;
+        setTimeout(() => {
+            isAnimating = false;
+        }); // Add a slight delay to prevent rapid animations
+    }
+}
+
+window.addEventListener('scroll', animateNavbar);
+
+
+const topElement = document.getElementById('card_1');
+const bottomElement = document.getElementById('card_2');
+
+
+topElement.style.opacity = 1; 
+bottomElement.style.opacity = 0;
+
+function AnimFade(topEl, botEl) {
+    const topRect = topEl.getBoundingClientRect();
+    const topPosition = topRect.top;
+
+    if (topPosition <= 0) {
+        const distanceToTop = Math.abs(topPosition);
+        topEl.style.opacity = 1 - distanceToTop * 0.01; // Adjust fading rate
+    }
+
+    // Brighten the bottom element when the top one dims
+    botEl.style.opacity = 1 - topEl.style.opacity;
+}
+
+function handleScroll() {
+    AnimFade(topElement, bottomElement);
+    requestAnimationFrame(handleScroll); // Smooth animation during scrolling
+}
+
+window.addEventListener('scroll', handleScroll);

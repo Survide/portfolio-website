@@ -51,7 +51,6 @@ button {
 button:hover {
     letter-spacing: 0.25em;
     transform: scale(0.9) rotate(0deg);
-    background: radial-gradient();
 }
 
 section {

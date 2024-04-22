@@ -4,6 +4,10 @@
     display: none;
   }
 
+:root {
+    --text-font-family: "Ruda", sans-serif; 
+}
+
 body {
     background-color: black;
     padding: 0;
@@ -12,6 +16,8 @@ body {
     font-family: "Ruda", sans-serif;
     font-size: 100px;
     height: 370vh;
+    user-select: none;
+    
     /* border: 5px solid white; */
 }   
 
@@ -22,6 +28,7 @@ body {
     height: 100px;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
     backdrop-filter: blur(10px);
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
     /* border: 5px solid white; */
 }
 
@@ -35,7 +42,7 @@ body {
 }
 
 button {
-    font-family: "Ruda", sans-serif;
+    font-family: var(--text-font-family);
     font-size: 50px;
     color: white;
     background-color: transparent;
@@ -98,6 +105,8 @@ section {
     flex-direction: column;
     gap: 0px;
     margin: 5px;
+    margin-top: 21vh;
+    /* border: 5px solid red; */
 }
 
 #whoami h2, #whoami p, #pfp{
@@ -126,24 +135,34 @@ section {
     transform: translateY(-100px);
 }
 
+/* #whatido {
+
+    border: 5px solid white;
+} */
+
+
+
 #cards {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 450px; 
-    /* border: 5px solid blue;  */
+    gap: 250px; 
+    margin-bottom: 150px;
+    /* border: 1px solid white;  */
 }
 
 #card_1, #card_2 {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100vh;
-    background-color: transparent;
-    border: 5px solid white;
+    background-color: black;
+    border: 2px solid white; 
     border-radius: 20px;
-    transition: 1s;
+    transition: 0.5s;
+
 }
 
 #card_1:hover, #card_2:hover {

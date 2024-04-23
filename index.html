@@ -11,8 +11,7 @@
 
     <nav id="navbar">
         <div id="nav-container">
-            <button>Home</button>
-            <button>Portfolio</button>
+            <a href="portfolioPage/index.html"><button>Portfolio</button></a>
         </div>
     </nav>
 
@@ -22,15 +21,15 @@
     </section>
 
     <section class="hidden" id="whoami">
-        <img src="catpfp.jpg" alt="pfp" id="pfp" draggable="false">
-        <h2>Johnny</h2>
-        <p>
-            Bing chilling 
-        </p>
+        <div class="hidden" id="whoami-container">
+            <img src="catpfp.jpg" alt="pfp" id="pfp" draggable="false">
+            <span id="name">Johnny</span>
+            <span id="describe">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, facere.</span>
+        </div>
     </section>
 
     <section class="hidden" id="whatido">
-        <h2>My Projects</h2>
+        <span id="my-projects">My Projects</span>
         <div class="hidden" id="cards">
 
             <div class="hidden" id="card_1">

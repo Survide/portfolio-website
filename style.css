@@ -15,17 +15,17 @@ body {
     color: white;
     font-family: "Ruda", sans-serif;
     font-size: 100px;
-    height: 370vh;
+    height: 370dvh;
     user-select: none;
-    
+    /* cursor: none; */
     /* border: 5px solid white; */
 }   
 
 #navbar {
     position: fixed;
     z-index: 100;
-    width: 100vw;
-    height: 100px;
+    width: 100dvw;
+    height: 10dvh;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
     backdrop-filter: blur(10px);
     transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -37,6 +37,7 @@ body {
     flex-direction: row;
     height: 2em;
     justify-content: space-around;
+    align-items: center;
     /* border: 5px solid white; */
     font-size: 50px;
 }
@@ -99,48 +100,48 @@ section {
     }
 }
 
-#whoami {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0px;
-    margin: 5px;
-    margin-top: 21vh;
-    /* border: 5px solid red; */
-}
-
-#whoami h2, #whoami p, #pfp{
-    position: relative;
-    color: white;
-    font-size: 100px;
-    /* border: 5px solid red; */
-}
-
-#whoami h2 {
-    font-size: 40px;
-    color: grey;
-}
-
-#whoami p {
-    font-size: 50px;
-} 
-
-#pfp {
-    /* width: 200px; */
-    height: 200px;
-    border-radius: 20px;
-}
-
-#whoami h2, #pfp {
-    transform: translateY(-100px);
-}
-
-/* #whatido {
-
+/* #whoami {
     border: 5px solid white;
 } */
 
+#whoami-container {
+    display: flex;
+    flex-direction: column;
+    height: 70dvh;
+    width: 100dvh;
+    /* border: 5px solid blue; */
+}
 
+#name, #pfp {
+    margin: 2dvh;
+    margin-top: 10dvh;
+    /* border: 5px solid #2a29a3; */
+}
+
+#name {
+    font-size: 0.5em;
+    align-self: flex-start;
+    margin: 2dvh;
+    margin-left: 5.3dvh;
+}
+
+#describe {
+    
+    text-wrap: wrap;
+    font-size: .35em;
+    margin-top: -32dvh;
+    margin-left: 26dvh;
+    padding: 2dvh;
+    width: 20em;
+    /* border: 5px solid #2a29a3; */
+
+}
+
+#pfp {
+    border-radius: 20px;
+    width: 20dvh;
+    align-self: flex-start;
+}
 
 #cards {
     display: flex;

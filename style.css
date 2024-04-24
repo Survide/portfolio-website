@@ -118,6 +118,29 @@ section {
     /* border: 5px solid #2a29a3; */
 }
 
+#pfp {
+    border-radius: 20px;
+    width: 20dvh;
+    align-self: flex-start;
+    animation: pfpAnim 1s linear;
+}
+
+
+@keyframes pfpAnim {
+    0% {
+        transform: translateY(0);
+        filter: blur(2px);
+    }
+    50% {
+        transform: translateY(-0.2em);
+        filter: blur(5px);
+    }
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+} 
+
 #name {
     font-size: 0.5em;
     align-self: flex-start;
@@ -137,11 +160,6 @@ section {
 
 }
 
-#pfp {
-    border-radius: 20px;
-    width: 20dvh;
-    align-self: flex-start;
-}
 
 #cards {
     display: flex;

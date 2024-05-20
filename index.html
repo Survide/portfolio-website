@@ -22,7 +22,7 @@
 
     <section class="hidden" id="whoami">
         <div class="hidden" id="whoami-container">
-            <img src="catpfp.jpg" alt="pfp" id="pfp" draggable="false">
+            <img src="catpfp.jpg" alt="pfp" id="pfp" draggable="false" class="hidden">
             <span id="name">Johnny</span>
             <span id="describe">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, facere.</span>
         </div>
@@ -33,21 +33,41 @@
         <div class="hidden" id="cards">
 
             <div class="hidden" id="card_1">
-                <h3 id="card_1_name">
-                    Project 1
-                </h3>
-                <h5 id="card_1_desc">
-                    Description
-                </h5>
+                <span id="card_1_name">
+                    Stock Exchange Discord Bot
+                </span>
+                <span id="card_1_desc">
+                    Made using python. <br> <br>
+                    What I learnt through this project: <br> 
+                    database <br>
+                    discordpy framework <br>
+                    webscraping <br>
+                    error handling <br>
+                    permission handling
+                </span>
+                <div id="slider-wrapper">
+                    <div id="slider">
+                        <img src="img/buystock.png" alt="buystock.png" draggable="false" id="buystockPng" class="slider-png">
+                        <img src="img/Portfolio.png" alt="portfolio.png" draggable="false" id="portfolioPng" class="slider-png">
+                        <img src="img/sellstock.png" alt="sellstock.png" draggable="false" id="sellstockPng" class="slider-png">
+                        <img src="img/file.png" alt="files.png" draggable="false" id="filesPng" class="slider-png">
+                    </div>
+                    <!-- <div id="slider-nav">
+                        <a href="#buystockPng"></a>
+                        <a href="#sellstockPng"></a>
+                        <a href="#portfolioPng"></a>
+                        <a href="#filesPng"></a>
+                    </div> -->
+                </div>
             </div>
 
             <div class="hidden" id="card_2">
-                <h3 id="card_2_name">
+                <span id="card_2_name">
                     Project 2
-                </h3>
-                <h5 id="card_2_desc">
+                </span>
+                <span id="card_2_desc">
                     Description 2
-                </h5>
+                </span>
             </div>
 
         </div>

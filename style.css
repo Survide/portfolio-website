@@ -44,7 +44,7 @@ body {
 
 button {
     font-family: var(--text-font-family);
-    font-size: 50px;
+    font-size: 1em;
     color: white;
     background-color: transparent;
     text-decoration: none;
@@ -78,7 +78,7 @@ section {
     color: white;
     top: 50%;
     transform: translateY(-150%);
-    font-size: 200px;
+    font-size: 2em;
     text-align: center;
     background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
     background-clip:border-box;
@@ -86,7 +86,7 @@ section {
     -webkit-text-fill-color: transparent;
 }
 #about-me h3 {
-    font-size: 50px;
+    font-size: .5em;
     animation: bob 5s linear infinite;
 } 
 

@@ -15,7 +15,7 @@ body {
     color: white;
     font-family: "Ruda", sans-serif;
     font-size: 100px;
-    height: 370dvh;
+    height: 330dvh;
     user-select: none;
     /* cursor: none; */
     /* border: 5px solid white; */
@@ -66,7 +66,7 @@ section {
     place-items: center;
     align-content: center;
     min-height: 80vh;
-    border: 5px red solid;
+    /* border: 5px red solid; */
 }
 
 #about-me {
@@ -110,22 +110,33 @@ section {
 
 #whoami-container {
     display: flex;
+    
     flex-direction: column;
     height: 70dvh;
     width: 100dvh;
-    /* border: 5px solid blue; */
+    /* border: 5px solid white; */
 }
 
 #name, #pfp {
-    margin: 2dvh;
-    margin-top: 10dvh;
-    /* border: 5px solid #2a29a3; */
+
+    margin-left: 5dvw;
+    /* border: 5px solid white; */
+}
+
+#name {
+    
+    margin-top: 1dvh;
+    margin-bottom: 1dvh;
+    font-size: 0.5em;
+    align-self: flex-start;
+    font-weight:bolder ;
+    color: #58585D;
 }
 
 #pfp {
+    margin-top: 10dvw;
     border-radius: 20px;
-    width: 20dvh;
-    align-self: flex-start;
+    width: 10dvh;
     animation: pfpAnim 1s linear;
 }
 
@@ -145,22 +156,14 @@ section {
     }
 } 
 
-#name {
-    font-size: 0.5em;
-    align-self: flex-start;
-    margin: 2dvh;
-    margin-left: 5.3dvh;
-}
-
 #describe {
     
     text-wrap: wrap;
-    font-size: .35em;
-    margin-top: -32dvh;
-    margin-left: 26dvh;
-    padding: 2dvh;
-    width: 20em;
-    /* border: 5px solid #2a29a3; */
+    font-size: .30em;
+
+    margin-left: 5dvw; 
+    margin-right: 15dvw;
+    /* border: 5px solid white; */
 
 }
 
@@ -172,7 +175,7 @@ section {
     width: 100dvh;
     gap: 10dvh; 
     margin: 5dvh;
-    border: 1px solid blue; 
+    /* border: 1px solid blue;  */
 }
 
 #card_1, #card_2 {
@@ -196,15 +199,17 @@ section {
 }
 
 #card_1_name, #card_2_name {
-    border: 5px solid white;
-    
+    position: relative;
+    margin-left: .4em;
+    /* border: 5px solid white; */
 } 
 
 #card_1_desc, #card_2_desc {
     padding: 2dvh;
     font-size: 2dvh;
     align-self: flex-start;
-    border: 5px solid white;
+    margin-left: .4em;
+    /* border: 5px solid white; */
 }
 
 .slider-wrapper {
@@ -227,9 +232,25 @@ section {
 	border-radius: 0.5rem;
 	-ms-overflow-style: none; 
 	scrollbar-width: none;
-    border: 5px solid white;
+    /* border: 5px solid white; */
 }
 
+#slider2 {
+    position: relative;
+    /* margin-left: 9dvw;
+    margin-bottom: 7dvh; */
+	display: flex;
+    height: 30dvh;
+    width: 30dvw;
+	overflow: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; 
+	scrollbar-width: none;
+    /* border: 5px solid white; */
+}
 
 #slider::-webkit-scrollbar {
 	display: none;
@@ -240,6 +261,14 @@ section {
 	object-fit:contain;
     width: 15dvw;
     height: 15dvh;
+
+}
+
+.slider-png2 {
+	scroll-snap-align: start;
+	object-fit:contain;
+    width: 30dvw;
+    height: 30dvh;
 
 }
 

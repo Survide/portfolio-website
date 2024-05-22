@@ -1,4 +1,6 @@
-
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -59,19 +61,26 @@ const bottomElement = document.getElementById('card_2');
 
 
 topElement.style.opacity = 1; 
-bottomElement.style.opacity = 0;
+bottomElement.style.opacity = 0.2;
 
 function AnimFade(topEl, botEl) {
     const topRect = topEl.getBoundingClientRect();
     const topPosition = topRect.top;
 
-    if (topPosition <= 0) {
+    if (topPosition <= 1) {
         const distanceToTop = Math.abs(topPosition);
-        topEl.style.opacity = 1 - distanceToTop * 0.01; // Adjust fading rate
+        topEl.style.opacity = 1 - distanceToTop * 0.005; // Adjust fading rate
+        botEl.style.opacity = 1 - topEl.style.opacity;
+        if (topEl.style.opacity <= 0.2) {
+            topEl.style.opacity = 0.2;
+        }
+        if (botEl.style.opacity <= 0.2) {
+            botEl.style.opacity = 0.2;
+        }
     }
 
     // Brighten the bottom element when the top one dims
-    botEl.style.opacity = 1 - topEl.style.opacity;
+    // botEl.style.opacity = 1 - topEl.style.opacity;
 }
 
 function handleScroll() {
@@ -81,12 +90,4 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 
-// const cursor = document.querySelector('#cursor');
-// document.addEventListener("mousemove", (e) => {
-//     let x = e.pageX;
-//     let y = e.pageY;
 
-//     cursor.style.top = y + 'px';
-//     cursor.style.left = x + 'px';
-
-// })

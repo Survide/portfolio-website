@@ -31,7 +31,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 // });
 
-const navbar = document.getElementById('navbar');
+const navbar = document.querySelector('#body-wrapper #navbar');
 let prevScrollPos = window.scrollY;
 let isAnimating = false;
 

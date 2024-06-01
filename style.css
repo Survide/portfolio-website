@@ -70,7 +70,7 @@ section {
   align-content: center;
   min-height: 100dvh;
   width: 100dvw;
-  gap: 50dvh;
+  gap: 10dvh;
   /* border: 5px red solid; */
 }
 
@@ -95,7 +95,7 @@ section {
 
 #about-me h1 {
   position: relative;
-  font-size: 7.5dvw;
+  font-size: 10dvw;
   text-align: center;
   margin-top: 25dvh;
   background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
@@ -106,8 +106,8 @@ section {
 
 #about-me h3 {
   position: relative;
-  margin-top: -30dvh;
-  font-size: 1.5dvw;
+  margin-top: -10dvh;
+  font-size: 3dvw;
   animation: bob 5s linear infinite;
 }
 
@@ -186,119 +186,105 @@ section {
 
   margin-left: 5dvw;
   margin-right: 15dvw;
+  height:15dvh;
+  width: 40dvw;
   /* border: 5px solid white; */
 }
 
+/* #my-projects {
+  border: 5px solid white;
+}
+*/
+
 #cards {
-  display: flex;
+  display:flex;
   justify-content: center;
   flex-direction: column;
   gap: 5dvh;
-  margin-top: -35dvh;
+  /* margin-top: -5dvh; */
+  width: 50dvw;
   /* border: 1px solid blue;  */
 }
 
-#card_1,
-#card_2 {
+#whatido {
   display: flex;
+  flex-direction: column;
+  gap: 5dvh;
+  border: 5px solid red;
+}
+
+#card_1, #card_2 {
+  position: relative;
   width: 50dvw;
   height: 50dvh;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
   background-color: black;
   border: 2px solid white;
   border-radius: 20px;
   transition: 0.5s;
 }
 
-#card_2 {
-  margin-bottom: 2em;
+.back_card {
+  opacity: 0;
+  transition: .5s;
 }
 
-#card_1:hover,
-#card_2:hover {
+#card_1:hover, #card_2:hover {
   box-shadow: 0px 0px 100px 3px #2a29a3;
 }
 
-#card_1_name,
-#card_2_name {
-  position: relative;
-  margin-left: 0.4em;
-  font-size: 0.8em;
-  /* border: 5px solid white; */
+#card_1:hover > .front_card, #card_2:hover > .front_card {
+  opacity: 0;
+  transition: .5s;
 }
 
-#card_1_desc,
-#card_2_desc {
+#card_1:hover > .back_card, #card_2:hover > .back_card {
+  opacity: 1;
+}
+
+#card_1_name, #card_2_name {
+  position: absolute;
+  margin-left: 1dvw;
+  top: 2.5dvh;
+  padding: 1dvw;
+  height: fit-content;
+  font-size: 5dvh;
+  /* border: 5px solid blue; */
+}
+
+#card_1_desc, #card_2_desc {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 2dvh;
   padding: 2dvh;
   font-size: 2dvh;
-  align-self: flex-start;
-  margin-left: 0.4em;
+  margin-left: 1dvw;
+  bottom: 2.5dvh;
+  /* border: 5px solid white ; */
+}
+
+.hov {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  padding: 2dvh;
+  font-size: 2dvh;
+  bottom: 5%;
+  left: 70%;
+  color: #A9A9A9
+}
+
+#buystockPng, #bjPng {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px #ffffff;
   /* border: 5px solid white; */
 }
 
-.slider-wrapper {
-  position: relative;
-  max-width: 48rem;
-  margin: 0 auto;
-}
 
-#slider {
-  position: relative;
-  margin-left: 5dvw;
-  margin-bottom: 7dvh;
-  display: flex;
-  height: 25dvh;
-  width: 25dvw;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  /* box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); */
-  box-shadow: 0px 0px 5px 5px white;
-  border-radius: 0.5rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  /* border: 5px solid white; */
-}
-
-#slider2 {
-  position: relative;
-  /* margin-left: 9dvw;
-    margin-bottom: 7dvh; */
-  display: flex;
-  height: 30dvh;
-  width: 30dvw;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  /* box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); */
-  box-shadow: 0px 0px 5px 5px white;
-  border-radius: 0.5rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  /* border: 5px solid white; */
-}
-
-#slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slider-png {
-  scroll-snap-align: start;
-  object-fit: contain;
-  width: 25dvw;
-  height: 25dvh;
-  /* border: 1px solid white; */
-}
-
-.slider-png2 {
-  scroll-snap-align: start;
-  object-fit: contain;
-  width: 30dvw;
-  height: 30dvh;
-}
 
 #footer {
     display: flex;
@@ -331,7 +317,7 @@ button:hover {
 .hidden {
   opacity: 0;
   filter: blur(10px);
-  transform: translateY(10dvh);
+  transform: translateY(5dvh);
   transition: all 0.5s;
 }
 

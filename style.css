@@ -202,7 +202,7 @@ section {
   width: fit-content;
   max-width: 60dvw;
   min-width: 50dvw;
-  border: 5px solid white;
+/*   border: 5px solid white; */
 }
 
 #whatido {

@@ -80,18 +80,13 @@ section {
   align-content: center;
 }
 
-/* #about-me h1, #about-me h3 {
-    position: relative;
-    color: white;
-    top: 50%;
-    transform: translateY(-150%);
-    font-size: 2em;
-    text-align: center;
-    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-    background-clip:border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
+#erf {
+  position: absolute;
+  z-index: -1;
+  height: 200dvh;
+  animation: erf_mv;
+  animation-timeline: scroll;
+}
 
 #about-me h1 {
   position: relative;
@@ -131,16 +126,35 @@ section {
   }
 }
 
-/* #whoami {
-    border: 5px solid white;
-} */
+@keyframes erf_mv {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50dvh);
+  }
+  100% {
+    transform: translateY(100dvh);
+  }
+}
+
+#whoami {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 5px solid white; */
+} 
 
 #whoami-container {
   display: flex;
-
   flex-direction: column;
-  height: 70dvh;
-  width: 100dvh;
+  /* border: 5px solid white; */
+}
+
+#satern {
+  position: absolute;
+  z-index: 0;
+  height: 200dvh;
   /* border: 5px solid white; */
 }
 
@@ -210,7 +224,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 5dvh;
-/*   border: 5px solid red; */
+  /* border: 5px solid red; */
 }
 
 #card_1, #card_2 {

@@ -196,19 +196,19 @@ section {
 
 #describe {
   /* text-wrap: wrap; */
-  font-size: 2.5dvh;
+  font-size: calc(12px + 1.5dvw);
   margin-left: 5dvw;
-  /* margin-right: 15dvw; */
   height:fit-content;
   width: fit-content;
   max-width: 60dvw;
-  /* border: 5px solid white; */
+  min-width: 50dvw;
+  border: 5px solid white;
 }
 
 #whatido {
   display: flex;
   flex-direction: column;
-  gap: 5dvh;
+  gap: 5svh;
   /* border: 5px solid red; */
 }
 

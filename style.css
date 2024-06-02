@@ -198,10 +198,10 @@ section {
   /* text-wrap: wrap; */
   font-size: 2.5dvh;
   margin-left: 5dvw;
-  margin-right: 15dvw;
+  /* margin-right: 15dvw; */
   height:fit-content;
   width: fit-content;
-  max-width: 40dvw;
+  max-width: 60dvw;
   /* border: 5px solid white; */
 }
 

@@ -276,20 +276,6 @@ section {
   /* border: 5px solid white; */
 }
 
-@media (max-width: 600px) {
-
-  #card_1, #card_2 {
-    width: 99dvw;
-  }
-
-  #card_1_desc {
-    font-size: calc(15px + .2dvw);
-  }
-  #buystockPng, #bjPng {
-    width: 100%;
-  }
-}
-
 .hov {
   position: absolute;
   height: fit-content;
@@ -303,16 +289,28 @@ section {
 
 #buystockPng, #bjPng {
   position: absolute;
-  width: calc(50dvw - 20px);
+  width: 50lvw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
-  box-shadow: 0px 0px 20px 5px #ffffff;
+  box-shadow: 0px 0px 20px 5px white;
   /* border: 5px solid white; */
 }
 
+@media (max-width: 600px) {
 
+  #card_1, #card_2 {
+    width: 99dvw;
+  }
+
+  #card_1_desc {
+    font-size: calc(15px + .2dvw);
+  }
+  #buystockPng, #bjPng {
+    width: 80dvw;
+  }
+}
 
 #footer {
     display: flex;

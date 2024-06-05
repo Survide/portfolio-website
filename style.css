@@ -285,9 +285,9 @@ section {
   #card_1_desc {
     font-size: calc(15px + .2dvw);
   }
-  /* #buystockPng, #bjPng {
-    width: 70dvw;
-  } */
+  #buystockPng, #bjPng {
+    width: 100%;
+  }
 }
 
 .hov {

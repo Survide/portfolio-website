@@ -202,7 +202,7 @@ section {
   width: fit-content;
   max-width: 60dvw;
   min-width: 50dvw;
-/*   border: 5px solid white; */
+  /* border: 5px solid white; */
 }
 
 #whatido {
@@ -259,9 +259,9 @@ section {
   position: absolute;
   margin-left: 1dvw;
   top: 2.5dvh;
-  padding: 1dvw;
+  padding: 2dvh;
   height: fit-content;
-  font-size: 3dvw;
+  font-size: calc(15px + 2dvw);
   /* border: 5px solid white; */
 }
 
@@ -270,10 +270,10 @@ section {
   height: fit-content;
   width: fit-content;
   padding: 2dvh;
-  font-size: 2dvw;
+  font-size: calc(15px + .5dvw);
   margin-left: 1dvw;
   bottom: 2.5dvh;
-  /* border: 5px solid white ; */
+  /* border: 5px solid white; */
 }
 
 .hov {

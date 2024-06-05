@@ -229,8 +229,8 @@ section {
 
 #card_1, #card_2 {
   position: relative;
-  width: 50dvw;
-  height: 50dvh;
+  width: 50lvw;
+  height: 50lvh;
   background-color: black;
   border: 2px solid white;
   border-radius: 20px;
@@ -276,6 +276,20 @@ section {
   /* border: 5px solid white; */
 }
 
+@media (max-width: 600px) {
+
+  #card_1, #card_2 {
+    width: 99dvw;
+  }
+
+  #card_1_desc {
+    font-size: calc(15px + .2dvw);
+  }
+  /* #buystockPng, #bjPng {
+    width: 70dvw;
+  } */
+}
+
 .hov {
   position: absolute;
   height: fit-content;
@@ -289,7 +303,7 @@ section {
 
 #buystockPng, #bjPng {
   position: absolute;
-  width: 50dvw;
+  width: calc(50dvw - 20px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

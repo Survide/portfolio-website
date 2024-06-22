@@ -1,75 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-</head>
-<body>
-    <img src="background.jpg" alt="" draggable="false" id="bg">
-    <section id="about-me">
-        <h1>About Me</h1>
-        <h3>SCROLL FOR MORE</h3>
+  </head>
+  <body>
+
+    <section id="bod">
+      <img src="img/cat.jpg" alt="" draggable="false" id="image">
+      <div id="glass-about-container">
+          <span id="about-title" class="about-items">
+            Hello, I'm Jun Ming
+          </span>
+          <span id="about-description" class="about-items">
+            I'm a student developer, with a background in python specialising in creating fun projects, I'm passionate about building projects that are not only functional but impactful
+          </span>
+      </div>
     </section>
 
-    <section class="hidden" id="whoami">
-        <div class="hidden" id="whoami-container">
-            <div id="blurr"></div>
-            <img src="catpfp.jpg" alt="pfp" id="pfp" draggable="false" class="hidden">
-            <span id="name">Johnny</span>
-            <span id="describe">I'm a student developer, with a background in python specialising in creating fun projects, I'm passionate about building projects that are not only functional but impactful</span>
+    <section id="projects">
+      <div id="grid-container">
+
+        <div id="project1" class="project">
+          <div id="front_1" class="front">
+            <img src="img/bj.png" alt="" draggable="false" id="bj" class="projectImg">
+          </div>
+          <div id="1_back" class="back">
+            <span id="1_title" class="title">
+              Multi-hand blackjack
+            </span>
+            <span id="1_description" class="description">
+              Made using python.<br><br>
+              What I learnt through this project: <br> 
+              classes <br>
+              handling 
+            </span>
+          </div>
         </div>
+
+        <div id="project2" class="project">
+          <div id="front_2" class="front">
+            <img src="img/buy.png" alt="" draggable="false" id="buy" class="projectImg">
+          </div>
+          <div id="2_back" class="back">
+            <span id="2_title" class="title">
+              Paper Trading
+            </span>
+            <span id="2_description" class="description">
+              
+            </span>
+          </div>
+        </div>
+
+        <div id="project3" class="project">
+          <div id="front_3" class="front">
+            <img src="img/newbot2.png" alt="" draggable="false" id="bot2" class="projectImg">
+          </div>
+          <div id="3_back" class="back">
+            <span id="3_title" class="title">
+              Multi-purpose Discord Bot
+            </span>
+            <span id="3_description" class="description">
+              Made using python. <br> <br>
+              What I learnt through this project: <br> 
+              database <br>
+              discordpy framework <br>
+              webscraping <br>
+              error handling <br>
+              permission handling
+            </span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section class="hidden" id="whatido">
-        <span id="my-projects">My Projects</span>
-        <div class="hidden" id="cards">
 
-            <div class="hidden" id="card_1">
-                <div class="front_card">
-                    <span id="card_1_name">
-                        Stock Exchange Discord Bot
-                    </span>
-                    <span id="card_1_desc">
-                        Made using python. <br> <br>
-                        What I learnt through this project: <br> 
-                        database <br>
-                        discordpy framework <br>
-                        webscraping <br>
-                        error handling <br>
-                        permission handling
-                    </span>
-                    <span class="hov">hover for images</span>
-                </div>
-                <div class="back_card">
-                    <img src="img/buystock.png" alt="buystock.png" draggable="false" id="buystockPng">
-                </div>
+
+
+
+    <div id="second-page">
+      <button id="more_pf" onclick="pageUp()">more portfolios</button>
+
+      <div id="second-canvas">
+
+        <div id="second-canvas-grid-container">
+
+          <div id="project4" class="project">
+            <div id="front_4" class="front">
+              <img src="img/mule.png" alt="" draggable="false" id="mule" class="projectImg">
+              <img src="img/mulegraph.png" alt="" draggable="false" id="mulegraph" class="projectImg">
             </div>
-
-            <div class="hidden" id="card_2">
-                <div class="front_card">
-                    <span id="card_2_name">
-                        Multi hand blackjack
-                    </span> 
-                    <span id="card_2_desc">
-                        Made using python.<br><br>
-                        What I learnt through this project: <br> 
-                        classes <br>
-                        handling 
-                    </span>
-                    <span class="hov">hover for images</span>
-                </div>
-                <div class="back_card">
-                    <img src="img/bj.png" alt="blackjack.png" draggable="false" id="bjPng">
-                </div>
+            <div id="back_4" class="back">
+              <span id="title_4" class="title">
+                albion profit
+              </span>
+              <span id="description_4" class="description">
+                what i learnt: <br> <br>
+                database <br>
+                matplotlib <br>
+              </span>
             </div>
+          </div>
+  
+          <div id="project5" class="project">
+            <div id="front_5" class="front">
+              <img src="img/beemi.png" alt="" draggable="false" id="beemi" class="projectImg">
+            </div>
+            <div id="back_5" class="back">
+              <span id="title_5" class="title">
+                bmi calculator
+              </span>
+              <span id="description_5" class="description">
+                
+              </span>
+            </div>
+          </div>
+  
+        </div>
+        <button id="page_down" onclick="pageDown()"><img src="img/down-arrow-in-a-circle-.png" id="arrow_down"></button>
+      </div>
 
-        </div>
-        <div id="footer">
-            <a href="portfolioPage/index.html"><button>more portfolios</button></a>
-        </div>
-    </section>
-</body>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

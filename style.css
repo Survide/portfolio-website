@@ -450,11 +450,11 @@
   }
   #bod {
     min-height: auto;
-    height: 20lvh;
+    height: 50lvh;
     /* border: 5px solid red; */
   }
   #grid-container {
-    height: 50%;
+    height: 100%;
   }
   #project1 {
     grid-row: 5/7;
@@ -470,6 +470,9 @@
   }
 
   #image {
+    display: none;
+  }
+  #more_pf {
     display: none;
   }
 }

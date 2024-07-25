@@ -454,6 +454,12 @@
   }
 }
 
+iframe{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%)
+}
+
 @media (max-width: 600px) {
   #glass-about-container {
     background-color: transparent;
